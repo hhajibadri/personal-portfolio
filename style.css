@@ -26,7 +26,7 @@ body {
     padding: 0 20px;
 
     p {
-       display: inline; 
+        display: inline;
     }
 
     p:hover {
@@ -45,22 +45,17 @@ body {
     z-index: 1000;
     padding: 1rem 0;
     border-bottom: 1px solid #374151;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .nav-container {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
 }
 
 .nav-menu {
@@ -101,7 +96,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #1f2937;
+    background: #1c1d23;
     color: white;
     padding: 100px 20px 50px;
 }
@@ -110,10 +105,18 @@ body {
     max-width: 600px;
 }
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 .highlight {
@@ -138,6 +141,31 @@ body {
     justify-content: center;
 }
 
+#typed-text {
+    font-family: monospace;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+#typed-text::after {
+    display: inline;
+    content: '|';
+    animation: blink 1s infinite;
+    color: var(--primary-color);
+}
+
 .btn {
     padding: 12px 24px;
     border: none;
@@ -155,7 +183,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: #9333ea;
+    background: skyblue;
 }
 
 .btn-secondary {
@@ -222,12 +250,21 @@ body {
 .education-content {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .education-item {
     display: flex;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
     padding: 2rem;
     background: #374151;
     border-radius: 8px;
@@ -240,11 +277,8 @@ body {
 }
 
 .education-icon {
-    background: var(--primary-color);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,10 +286,21 @@ body {
     flex-shrink: 0;
 }
 
+.education-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.education-details {
+    flex: 1;
+}
+
 .education-details h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #f9fafb;
+    justify-self: center;
 }
 
 .institution {
@@ -334,12 +379,14 @@ body {
 }
 
 .project-link:hover {
-    color: #9333ea;
+    color: var(--primary-color);
 }
 
 /* Contact Section */
 .contact-content {
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     max-width: 800px;
@@ -372,13 +419,6 @@ body {
 
 .contact-item a:hover {
     color: var(--primary-color);
-}
-
-.contact-form {
-    background: #374151;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #4b5563;
 }
 
 .form-group {
