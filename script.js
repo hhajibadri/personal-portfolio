@@ -48,6 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typedText) {
         setTimeout(() => {
             typeWriter(typedText, 'Computer Science Student @ UCSD', 50);
-        }, 3000);
+        }, 2000);
     }
 });

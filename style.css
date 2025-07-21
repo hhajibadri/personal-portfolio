@@ -382,6 +382,42 @@ body {
     color: var(--primary-color);
 }
 
+/* Skills Section */
+
+.skills-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+
+    h3 {
+        color: var(--primary-color);
+    }
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills-list li {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #e5e7eb;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    transition: border-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    border-color: var(--primary-color);
+}
+
 /* Contact Section */
 .contact-content {
     display: flex;
@@ -456,7 +492,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #111827;
+    background: #1f2937;
     color: #9ca3af;
     text-align: center;
     padding: 2rem 0;
