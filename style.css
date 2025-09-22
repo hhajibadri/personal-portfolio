@@ -306,7 +306,7 @@ body {
 .institution {
     font-weight: 600;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .duration {
@@ -338,15 +338,19 @@ body {
     border-color: var(--primary-color);
 }
 
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
+
 .project-content h3 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
     color: #f9fafb;
 }
 
 .project-content p {
     color: #d1d5db;
-    margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
@@ -354,7 +358,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .tech-tag {
